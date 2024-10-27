@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+ .home .titre{
+text-align: center;
+font-size: 500%;
+color:rgb(128, 0, 0)
+}
+.home .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .swiper-slide .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; 
+}
+
+.home .swiper-slide img {
+  width: 100%; 
+  max-height: 200px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+}
+
+
+
+:root{
+ --green:#8aae27;
+ --black:#192a56;
+ --light-color:#666;
+ --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+*{
+ font-family: 'Nunito', sans-serif;
+ margin:0; padding:0;
+ box-sizing: border-box;
+ text-decoration: none;
+ outline: none; border:none;
+ text-transform: capitalize;
+ transition: all .2s linear;
+}
+html{
+ font-size: 62.5%;
+ 
+ scroll-padding-top: 5.5rem;
+ scroll-behavior: smooth;
+}
+header{
+ position: fixed;
+ top:50; left: 0; right:0;
+ background: #fff;
+ padding:1rem 7%;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ z-index: 1000;
+ box-shadow: var(--box-shadow);
+}
+header .logo{
+ color:var(--black);
+ font-size: 2.5rem;
+ font-weight: bolder;
+}
+/*t5ather lfarchita*/
+header .logo i{
+ color:rgb(128, 0, 0);
+}
+
+header .navbar a{
+ font-size: 1.7rem;                     /* lmenu li lfou9*/
+ border-radius: .5rem;
+ padding:.5rem 1.5rem;
+ color:var(--light-color);
+}
+header .navbar a.active,
+header .navbar a:hover{
+    color:#fff;
+    background: rgb(128, 0, 0);
+}
+
+/*icon li 3al limin */
+header .icons i,
+header .icons a {
+ cursor: pointer;
+ margin-left: .5rem;
+ height:4.5rem;
+ line-height: 4.5rem;
+ width:4.5rem;
+ text-align: center;
+ font-size: 1.7rem;
+ color:var(--black);
+ border-radius: 50%;
+ background: #eee;
+}
+header .icons i:hover,
+header .icons a:hover{
+    color:#fff;
+    background: rgb(128, 0, 0);
+    transform: rotate(360deg);
+}
+
+
+
+/* plat francaise*/
+
+.dishes .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));  /*grid m9asem*/
+    gap:1.5rem;
+}
+
+
+.dishes .box-container .box 
+{
+    padding:2.5rem;
+    background:#fff;
+    border-radius: .5rem;
+    border:.1rem solid rgba(0,0,0,.2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+}
+.dishes .box-container .box img{
+    height:17rem;
+    margin:1rem 0;
+}
+.dishes .box-container .box h3{
+    color:var(--black);
+    font-size: 2.5rem;
+}
+.dishes .box-container .box span{
+    color:rgb(128, 0, 0);
+    font-weight: bolder;
+    margin-right: 1rem;
+    font-size: 2.5rem;
+}
+/*---------------------------------------------------- menu tma5mi5a---------------------*/
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.menu .box-container .box{
+    background: #fff;
+    border:.1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);    
+}
+
+.menu .box-container .box .image{
+    height: 25rem;
+    width: 100%;
+    padding:1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+
+.menu .box-container .box .price{
+    color:rgb(128, 0, 0);
+    margin-left: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+    
+}
+
+
+.menu .box-container .box h2{
+    color:var(--black);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.anwen{
+    text-align: center;
+    color:rgb(128, 0, 0);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.sous-anwen{
+    text-align: center;
+    color:var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+/*-----------------------formulaire----------------------------*/
+
+.order form{
+    max-width:90rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border:.1rem solid rgba(0,0,0,.2);                 /*background abyeth*/
+    background:#fff;
+    padding:1.5rem;
+    margin:0 auto;
+}
+.order form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.order form .inputBox .input{
+    width:49%;
+}
+.order form .inputBox .input span{
+    display:block;
+    padding:.5rem 0;              /* lektiba span*/
+    font-size: 1.5rem;
+    color:var(--light-color);
+}
+.order form .inputBox .input input,
+.order form .inputBox .input textarea{
+    background:#eee;
+    border-radius: .5rem;
+    padding:1rem;
+    font-size: 1.6rem;
+    color:var(--black);
+    text-transform: none;
+    margin-bottom: 1rem;
+    width:100%;
+}
+.order form .inputBox .input input:focus,
+.order form .inputBox .input textarea:focus{
+    border:.1rem solid var(--green);
+}
+.order form .inputBox .input textarea{
+    height:20rem;
+    resize: none;
+}
+
+.order form .btn{
+    margin-top: 0;
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--black);
+    border-radius: .5rem;                 /* boutonn----------------------*/
+    cursor: pointer;
+    padding:.8rem 3rem;
+}
+
+.btn:hover{
+    background:rgb(128, 0, 0) ;
+    letter-spacing: .1rem;
+}
+
+  footer{
+   
+    color: rgb(128, 0, 0);
+    padding: 20px 0 10px 0;
+    text-align: center;
+}
+
+
+.social .button{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.social .button:hover{
+  width: 200px;
+}
+.social .button .icon{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.social .button:nth-child(1):hover .icon{
+  background: #4267B2;
+}
+.social .button:nth-child(2):hover .icon{
+  background: #1DA1F2;
+}
+.social .button:nth-child(3):hover .icon{
+  background: #E1306C;
+}
+.social .button:nth-child(4):hover .icon{
+  background: #333;
+}
+
+.social .button .icon i{
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.social .button:hover .icon i{
+  color: #fff;
+}
+.social .button span{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.social .button:nth-child(1) span{
+  color: #4267B2;
+}
+.social .button:nth-child(2) span{
+  color: #1DA1F2;
+}
+.social .button:nth-child(3) span{
+  color: #E1306C;
+}
+.social .button:nth-child(4) span{
+  color: #333;
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Food Website</title>
+
+    <!-- Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    // Function for form validation
+    function validerFormulaire() {
+        // Get values of the fields
+        var nom = document.getElementById('nom').value;
+        var numero = document.getElementById('numero').value;
+        var commande = document.getElementById('commande').value;
+        var quantite = document.getElementById('quantite').value;
+        var dateHeure = document.getElementById('dateHeure').value;
+        var adresse = document.getElementById('adresse').value;
+        var message = document.getElementById('message').value;
+
+        // Validate the name
+        if (nom === '') {
+            alert('Le nom est obligatoire.');
+            return false;
+        }
+
+        // Validate the number
+        if (numero === '' || isNaN(numero) || numero.length !== 8) {
+            alert('Le numéro de téléphone doit être un nombre de 8 chiffres.');
+            return false;
+        }
+
+        // Validate the command
+        if (commande === '') {
+            alert('Le nom de la commande est obligatoire.');
+            return false;
+        }
+
+        // Validate the quantity
+        if (quantite === '' || isNaN(quantite)) {
+            alert('La quantité doit être un nombre.');
+            return false;
+        }
+
+        // Validate the date and time
+        if (dateHeure === '') {
+            alert('La date et l\'heure sont obligatoires.');
+            return false;
+        }
+
+        // Validate the date format and ensure it's not in the past
+        var currentDate = new Date();
+        var inputDate = new Date(dateHeure);
+        if (isNaN(inputDate) || inputDate < currentDate) {
+            alert('Veuillez entrer une date et une heure valides, qui ne sont pas dans le passé.');
+            return false;
+        }
+
+        // Validate the address
+        if (adresse === '') {
+            alert('L\'adresse est obligatoire.');
+            return false;
+        }
+
+        // If all validations pass, return true
+        return true;
+    }
+
+    // Add an event handler for the form submission button
+    document.getElementById('formOrder').addEventListener('submit', function (event) {
+        // Call the validation function before submitting the form
+        if (!validerFormulaire()) {
+            // Prevent form submission if errors are present
+            event.preventDefault();
+        }
+    });
+});
+
+</script>
+</head>
+
+<body>
+
+    <header>
+        <!-- Logo farchita -->
+        <a href="#" class="logo"><i class="fas fa-utensils"></i>king food</a>
+        <nav class="navbar">
+            <a class="active" href="#home">home</a>
+            <a href="#nos plats">nos plas</a>
+            <a href="#menu">menu</a>
+            <a href="#order">order</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+
+        <div class="swiper-container home-slider">
+
+            <div class="swiper-wrapper wrapper">
+                <!-- Taswiret parket -->
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <br>
+                        <h3>spicy noodles</h3><br>
+                    </div>
+                    <br>
+                    <h1 class="titre">King Food</h1>
+                    <div class="image">
+                        <img src="barkett.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="dishes" id="dishes">
+        <p id="#menu"></p>
+        <h3 class="anwen"> Nos Menu </h3>
+        <h1 class="sous-anwen" id="menu"> fast food </h1>
+
+        <div class="box-container">
+            <div class="box">
+                <img src="burger.jpg" alt="">
+                <h3>burger</h3>
+                <span>9.500 dt</span>
+            </div>
+            <div class="box">
+                <img src="téléchargement (1).jfif" alt="">
+                <h3>nuggets</h3>
+                <span>6.000 dt</span>
+            </div>
+            <div class="box">
+                <img src="djeja2.jpg" alt="">
+                <h3>djeja</h3>
+                <span>11.000 dt</span>
+            </div>
+            <div class="box">
+                <img src="téléchargement (2).jfif" alt="">
+                <h3>pizza</h3>
+                <span>10.000 dt</span>
+            </div>
+            <div class="box">
+                <img src="pic.jpg" alt="">
+                <h3>safout</h3>
+                <span>7.000 dt</span>
+            </div>
+            <div class="box">
+                <img src="téléchargement (3).jfif" alt="">
+                <h3>chicken thighs</h3>
+                <span>5.000 dt</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <h2 class="anwen"> Tma5mi5a </h2>
+        <h1 class="sous-anwen" id="nos plats"> Notre specialite tunisienne </h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="lavrak.jpg" alt="">
+                </div>
+                <h2>7out mechwi</h2>
+                <span class="price">6.000 dt</span>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="shan tounsi.jfif" alt="">
+                </div>
+                <h2>plat tunisien</h2>
+                <span class="price">5.000 dt</span>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="telecharg.png" alt="">
+                </div>
+                <h2>3ejja</h2>
+                <span class="price">8.000 dt</span>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="couscous.jfif" alt="">
+                </div>
+                <h2>plat koukous </h2>
+                <span class="price">9.500 dt</span>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="lablebi.jpg" alt="">
+                </div>
+                <h2>sa7fa lablebi</h2>
+                <span class="price">5.000 dt</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="order" id="formOrder">
+        <p id="order">order</p>
+        <h1 class="anwen">Commandez maintenant</h1>
+        <h3 class="sous-anwen">GRATUIT ET RAPIDE</h3>
+        <form>
+            <div class="inputBox">
+                <div class="input">
+                    <span>Votre nom</span>
+                    <input type="text" id="nom" placeholder="Entrez votre nom">
+                    <span id="nomError" class="error"></span>
+                </div>
+                <div class="input">
+                    <span>Votre numéro</span>
+                    <input type="number" id="numero" placeholder="Entrez votre numéro">
+                    <span id="numeroError" class="error"></span>
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>Votre commande</span>
+                    <input type="text" id="commande" placeholder="Entrez le nom du plat">
+                    <span id="commandeError" class="error"></span>
+                </div>
+                <div class="input">
+                    <span>Aliments supplémentaires</span>
+                    <input type="text" id="message" placeholder="Extra avec la commande">
+                    <span id="messageError" class="error"></span>
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>Quantité</span>
+                    <input type="number" id="quantite" placeholder="Combien de commandes">
+                    <span id="quantiteError" class="error"></span>
+                </div>
+                <div class="input">
+                    <span>Date et heure</span>
+                    <input type="datetime-local" id="dateHeure">
+                    <span id="dateHeureError" class="error"></span>
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>Votre adresse</span>
+                    <textarea name="" id="adresse" placeholder="Entrez votre adresse" cols="30"
+                        rows="10"></textarea>
+                    <span id="adresseError" class="error"></span>
+                </div>
+                <div class="input">
+                    <span>Votre message</span>
+                    <textarea name="" placeholder="Entrez votre message" id="message" cols="30"
+                        rows="10"></textarea>
+                    <span id="messageError" class="error"></span>
+                </div>
+            </div>
+
+            <input type="submit" value="Commander maintenant" class="btn">
+        </form>
+    </section>
+
+    <footer>
+        <h1>contactez nous</h1>
+        <div class="social">
+            <div class="button">
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <span>Facebook</span>
+            </div>
+            <div class="button">
+                <div class="icon">
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <span>Twitter</span>
+            </div>
+            <div class="button">
+                <div class="icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <span>Instagram</span>
+            </div>
+            <div class="button">
+                <div class="icon">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <span>YouTube</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
